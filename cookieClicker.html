@@ -24,10 +24,27 @@
     // single time it gets clicked, the function only runs when the click actually happens, not before
     cookieButton.addEventListener("click", function () {
       clickCount++; // add 1 every time
-      counterDisplay.textContent = clickCount; // show the new number on the page
+      counterDisplay.textContent = clickCount;
 
-    
-  </script>
+       if (clickCount === 10) {
+        messageDisplay.textContent = "You're just getting started!";
+        document.body.style.backgroundColor = "#e6ffe6";
+        cookieButton.textContent = "🍩";
+      } else if (clickCount === 25) {
+        messageDisplay.textContent = "Wow, that's a lot of cookies!";
+        document.body.style.backgroundColor = "#add8e6";
+        cookieButton.textContent = "🧁";
+      } else if (clickCount === 50) {
+        messageDisplay.textContent = "Are you still clicking?";
+        document.body.style.backgroundColor = "#ffb6c1";
+        cookieButton.textContent = "🎂";
+      } else if (clickCount === 100) {
+        messageDisplay.textContent = "You win!";
+        document.body.style.backgroundColor = "#ffd700";
+        cookieButton.textContent = "🏆";
+      }
+    });
+ </script>
 
 </body>
 </html>
