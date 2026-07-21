@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie Clicker</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 60px; background-color: #fdf6e3;">
+  
+  <h1>🍪 Kyle's Cookie Clicker</h1>
 
+  <button id="cookieButton" style="font-size: 4rem; border: none; background: none; cursor: pointer;">🍪</button>
+
+  <p>Cookies clicked: <span id="counter">0</span></p>
+  <p id="message"></p>
+
+  <script>
+    const cookieButton = document.getElementById("cookieButton");
+    const counterDisplay = document.getElementById("counter");
+    const messageDisplay = document.getElementById("message");
+
+    let clickCount = 0; // keeps track of how many times the button's been clicked
+
+    // addEventListener watches the button and runs this function every
+    // single time it gets clicked, the function only runs when the click actually happens, not before
+    cookieButton.addEventListener("click", function () {
+      clickCount++; // add 1 every time
+      counterDisplay.textContent = clickCount; // show the new number on the page
+
+    
+  </script>
+
+</body>
+</html>
